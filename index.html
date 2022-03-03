@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Todo list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>To-Do List</h1>
+        <img class="settingIco" src="Images/Settings icon.png" alt="" srcset="">
+    </header>
+    
+    <div id="content">
+        <section id="secLeft">
+            <div id="inSection">
+                <p>Monday,<br>1st March,<br>2022</p>
+                <button>Change<br> Date</button>
+                <span></span>
+            </div>
+        </section>
+        <article>
+            <ul id="listOut">
+            </ul>
+        </article>
+        <section id="secRight">
+            <button>New<br>Item</button>
+        </section>
+    </div>
+    <div id="newItem" class="hiddenCont">
+        <span class="clickable" id="windowR1">&#8634;</span>
+        <input type="text" id="titleInp" placeholder="title">
+        <span class="clickable" id="windowX1">&#9747;</span>
+        <div id="inpStatus" class="input inRadio">
+            <div>
+                <label for="status0">planned</label><br>
+                <input type="radio" name="status" id="status0" value="planned">
+            </div>
+            <div>
+                <label for="status1">started</label><br>
+                <input type="radio" name="status" id="status1" value="started">
+            </div>
+            <div>
+                <label for="status2">paused</label><br>
+                <input type="radio" name="status" id="status2" value="paused">
+            </div>
+            <div>
+                <label for="status3">finished</label><br>
+                <input type="radio" name="status" id="status3" value="finished">
+            </div>
+        </div>
+        <button class="btnCreate" id="btnCreate">CREATE</button>
+        <button class="btnCreate" id="btnUpdate">UPDATE</button>
+        <h3>optional...</h3>
+        <div id="optional">
+            <div class="input">
+                <input type="time" name="" id="timeIn1" value="12:00" placeholder ="10:00">
+                -
+                <input type="time" name="" id="timeIn2" value="10:00" placeholder ="10:00">
+                <br>
+                <button id="timeBtn">Set time</button>
+            </div>
+            <div class="input">
+                <textarea name="" id="txtInp1" cols="30" rows="10" placeholder="add a description?.."></textarea>
+            </div>
+            <div class="input">
+                <input type="date" name="" id="dateIn1" value="2000-05-05" placeholder ="00:00">
+                -
+                <input type="date" name="" id="dateIn2" value="2000-05-05" placeholder ="00:00">
+            </div>
+
+            <div id="inpPrio" class="input inRadio">
+            <div>
+                <label for="priority0">Urgent</label><br>
+                <input type="radio" name="priority" id="priority0" value="0">
+            </div>
+            <div>
+                <label for="priority1">Needed</label><br>
+                <input type="radio" name="priority" id="priority1" value="1">
+            </div>
+            <div>
+                <label for="priority2">Soon</label><br>
+                <input type="radio" name="priority" id="priority2" value="2">
+            </div>
+            <div>
+                <label for="priority3">Trivial</label><br>
+                <input type="radio" name="priority" id="priority3" value="3">
+            </div>
+            </div>
+            <div class="input">
+                <h3>Difficulty</h3>
+                <input type="number" name="diffIn" id="inpDiff" min="1" max="5" value="1">
+            </div>
+        </div>
+    </div>
+    <div id="backgroundElm" class="hiddenCont"></div>
+    <script src="dom.js"></script>
+    <script src="window.js"></script>
+    <script src="list.js"></script>
+    <script src="pageState.js"></script>
+    
+</body>
+</html>
